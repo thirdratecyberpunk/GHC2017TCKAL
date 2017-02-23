@@ -32,17 +32,20 @@ public class DataReader{
 		}
 		finally{
 		}
+	int[] intContents = new int[contents.size()];
+	for (int i = 0; i < contents.size(); i++){
+		intContents[i] = Integer.parseInt(contents.get(i));
 	}
-	int numberOfVideos = Integer.parseInt(contents.get(0));
-	new int[numberOfVideos] = videos;
+	int numberOfVideos = intContents[0];
+	Video[] videos = new Video[numberOfVideos];
 	while(contents.size() < (4 + numberOfVideos)){
 		int i = 0;
 		int videoSize = 5;
-		new Video(i, contents.get(videoSize));
+		videos.add(new Video(i, contents.get(videoSize)));
 		i++;
 		videoSize ++;
-		
+
 	}
-	}
-	
+}
+
 }
