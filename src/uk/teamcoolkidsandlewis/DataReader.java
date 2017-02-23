@@ -33,4 +33,16 @@ public class DataReader{
 		finally{
 		}
 	}
+	int numberOfVideos = Integer.parseInt(contents.get(0));
+	new int[numberOfVideos] = videos;
+	while(contents.size() < (4 + numberOfVideos)){
+		int i = 0;
+		int videoSize = 5;
+		new Video(i, contents.get(videoSize));
+		i++;
+		videoSize ++;
+		
+	}
+	}
+	
 }
