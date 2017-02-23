@@ -4,11 +4,17 @@ import java.util.ArrayList;
 
 public class Cache {
 	
+	private int id;
 	private ArrayList<EndPointCacheConnection> endpoints;
 	private int size; 
 	
-	public Cache(ArrayList<EndPointCacheConnection> endpoints){
+	public Cache(ArrayList<EndPointCacheConnection> endpoints, int id){
 		this.endpoints = endpoints;
+		this.id = id;
+	}
+	
+	public int getId(){
+		return id;
 	}
 	
 	public ArrayList<EndPointCacheConnection> getEndPointCacheConnections(){

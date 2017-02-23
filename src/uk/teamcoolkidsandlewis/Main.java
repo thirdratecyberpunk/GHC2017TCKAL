@@ -14,12 +14,17 @@ public class Main {
 		//Provide each cache to Sorting
 		//    Store each result in hashmap as cache -> video
 		
-		fakeData
+		results = fakeData();
+		new Output(results);
 	}
 	
 	private HashMap<Cache, Video> fakeData(){
 		HashMap<Cache, Video> results = new HashMap<Cache, Video>();
-		results.put(new Cache(), new Video(0, 100));
+		
+		results.put(new Cache(null, 0), new Video(0, 100));
+		results.put(new Cache(null, 1), new Video(0, 100));
+		
+		return results;
 	}
 	
 }
